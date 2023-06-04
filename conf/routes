@@ -1,0 +1,7 @@
+GET     /           controllers.AppController.index
+
+GET     /posts      controllers.PostController.listPosts
+POST    /posts      controllers.PostController.createPost
+GET     /posts/:id  controllers.PostController.readPost(id: reactivemongo.bson.BSONObjectID)
+PUT     /posts/:id  controllers.PostController.updatePost(id: reactivemongo.bson.BSONObjectID)
+DELETE  /posts/:id  controllers.PostController.deletePost(id: reactivemongo.bson.BSONObjectID)
